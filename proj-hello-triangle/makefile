@@ -27,5 +27,5 @@ glad:
 	cd ../$(PROJECT)
 clean:
 	-del *.o
-	-del *.exe
+	# -del *.exe
 
