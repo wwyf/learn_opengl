@@ -10,3 +10,7 @@
 1. proj开头的文件夹
     1. 在学习过程中写的各种小项目。
     1. 这些小项目就不把依赖的库放在项目中了，直接依赖库根目录处的库还有头文件。
+
+## 参考资料
+
+学习过程，主要参考[https://learnopengl-cn.github.io](https://learnopengl-cn.github.io)
