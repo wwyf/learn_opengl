@@ -1,8 +1,9 @@
+# Target PROJECT and File
+PROJECT = proj-hello-triangle
+TARGET_FILE = hello.cpp
+
 # the ROOT dictionary
 ROOT = ..
-PROJECT = proj-hello-triangle
-# Target File
-TARGET_FILE = hello.cpp
 # compile option
 CXX_FLAGS = -std=c++11 -g -Wall  
 CXX_INCLUDES =-I$(ROOT)/include
