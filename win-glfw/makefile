@@ -1,7 +1,7 @@
 # the ROOT dictionary
 ROOT = .
 # Target File
-TARGET_FILE = t.cpp
+TARGET_FILE = triangle.cpp
 # compile option
 CXX_FLAGS = -std=c++11 -g -Wall  
 CXX_INCLUDES =-I$(ROOT)/include
@@ -9,11 +9,11 @@ CXX_INCLUDES =-I$(ROOT)/include
 CXX_LIB = -L$(ROOT)/lib
 STATIC_LINK_LIB = -lglfw3 -lopengl32 -lgdi32
 
-all:t.out t.o
-	./t.out
+all:t.exe t.o
+	./t.exe
 	make clean
-t.out:t.o glad.o
-	g++ $(CXX_FLAGS) t.o glad.o -o t.out  $(CXX_LIB)  $(STATIC_LINK_LIB)
+t.exe:t.o glad.o
+	g++ $(CXX_FLAGS) t.o glad.o -o t.exe  $(CXX_LIB)  $(STATIC_LINK_LIB)
 t.o:t.cpp
 	g++ $(CXX_INCLUDES) $(CXX_FLAGS) -o t.o -c $(TARGET_FILE)
 glad.o:glad.c
