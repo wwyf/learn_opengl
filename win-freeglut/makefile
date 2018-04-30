@@ -1,23 +1,37 @@
 # the ROOT dictionary
 ROOT = .
 # Target File
-TARGET_FILE = t.cpp
+TARGET_FILE = hello.cpp
 # compile option
 CXX_FLAGS = -std=c++11 -g -Wall  
 CXX_INCLUDES =-I$(ROOT)/include
 # 增加静态链接库的寻找目录
 CXX_LIB = -L$(ROOT)/lib
-STATIC_LINK_LIB = -lglfw3 -lopengl32 -lgdi32
+STATIC_LINK_LIB = -lopengl32 -lfreeglut_static  -lwinmm -lgdi32
+DY_LINK_LIB = -lopengl32 -lfreeglut
 
-all:t.out t.o
-	./t.out
+static:t_static.exe
+	./t_static.exe
 	make clean
-t.out:t.o glad.o
-	g++ $(CXX_FLAGS) t.o glad.o -o t.out  $(CXX_LIB)  $(STATIC_LINK_LIB)
-t.o:t.cpp
-	g++ $(CXX_INCLUDES) $(CXX_FLAGS) -o t.o -c $(TARGET_FILE)
-glad.o:glad.c
-	g++ $(CXX_INCLUDES) $(CXX_FLAGS) -o glad.o -c glad.c
+t_static.exe:hello_static.o Callbacks_static.o
+	g++ hello_static.o Callbacks_static.o -o t_static.exe  $(CXX_FLAGS) $(CXX_LIB)  $(STATIC_LINK_LIB) -Wl,--subsystem,windows
+Callbacks_static.o:Callbacks.cpp
+	g++ -c Callbacks.cpp -o Callbacks_static.o -D FREEGLUT_STATIC  $(CXX_FLAGS) $(CXX_INCLUDES)  
+hello_static.o:hello.cpp
+	g++ -c hello.cpp -o hello_static.o -D FREEGLUT_STATIC  $(CXX_FLAGS) $(CXX_INCLUDES)  
+
+
+dy:t.exe
+	./t.exe
+	make clean
+t.exe:hello.o Callbacks.o
+	g++ hello.o Callbacks.o -o t.exe  $(CXX_FLAGS) $(CXX_LIB)  $(DY_LINK_LIB) -Wl,--subsystem,windows
+Callbacks.o:Callbacks.cpp
+	g++ -c Callbacks.cpp -o Callbacks.o $(CXX_FLAGS) $(CXX_INCLUDES)  
+hello.o:hello.cpp
+	g++ -c hello.cpp -o hello.o $(CXX_FLAGS) $(CXX_INCLUDES)  
+
+
 
 # all:t.out t.o
 # 	./t.out
