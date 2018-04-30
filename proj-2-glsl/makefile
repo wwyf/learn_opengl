@@ -1,5 +1,5 @@
 # Target PROJECT and File
-PROJECT = proj-hello-triangle
+PROJECT = proj-2-glsl
 TARGET_FILE = hello.cpp
 
 # the ROOT dictionary
