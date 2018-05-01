@@ -1,7 +1,6 @@
 # learn_opengl
 
-这是我在win10下开发opengl程序的环境。
-参考自https://learnopengl-cn.github.io
+这是我在win10下学习开发opengl程序的环境。
 
 本项目主要分为两部分：
 
