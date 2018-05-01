@@ -1,6 +1,6 @@
 # Target PROJECT and File
 PROJECT = proj-1.6-texture
-TARGET_FILE = 1.6-texture.cpp
+TARGET_FILE = 1.6.1-texture.cpp
 
 # the ROOT dictionary
 ROOT = ..
