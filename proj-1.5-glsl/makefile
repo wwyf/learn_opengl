@@ -1,6 +1,6 @@
 # Target PROJECT and File
-PROJECT = proj-2-glsl
-TARGET_FILE = t.cpp
+PROJECT = proj-1.5-glsl
+TARGET_FILE = t3.cpp
 
 # the ROOT dictionary
 ROOT = ..
