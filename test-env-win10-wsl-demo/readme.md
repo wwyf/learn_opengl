@@ -22,7 +22,7 @@ sudo apt install libassimp-dev
 
 ## 小结
 
-这是在wsl上配置的，为了能够让wsl里面的程序在window运行图形界面，还另外装了VcXsrv作为Xwindow server。然后在启动VcXsrv时还修改了一些配置才运行的比较正。
+这是在wsl上配置的，为了能够让wsl里面的程序在window运行图形界面，还另外装了VcXsrv作为Xwindow server。然后在启动VcXsrv时还修改了一些配置才能运行起来。
 
 
 
