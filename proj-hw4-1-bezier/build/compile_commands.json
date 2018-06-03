@@ -1,0 +1,7 @@
+[
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-1-bezier/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-1-bezier.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-1-bezier.dir\\source\\hw4-1-bezier.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-1-bezier\\source\\hw4-1-bezier.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-1-bezier/source/hw4-1-bezier.cpp"
+}
+]
