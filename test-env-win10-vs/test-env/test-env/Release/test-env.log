@@ -1,5 +1,14 @@
-﻿  glad.cpp
+﻿  main.cpp
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\main.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\shader_m.h(53): warning C4101: 'infoLog': unreferenced local variable
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\shader_m.h(52): warning C4101: 'success': unreferenced local variable
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\element.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\element.h(111): warning C4305: 'initializing': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\main.cpp(150): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\main.cpp(151): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating code
-  All 303 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  29 of 267 functions (10.9%) were compiled, the rest were copied from previous compilation.
+    13 functions were new in current compilation
+    13 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   test-env.vcxproj -> E:\0code\learn_opengl\test-env-win10-vs\test-env\Release\test-env.exe

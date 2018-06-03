@@ -78,6 +78,108 @@ private:
 };
 
 /**
+ * @brief Get the point object
+ * 
+ * 计算（x1,y1) (x2,y2) 两点间比例为t处的点的坐标。
+ * 
+ * @param x1 
+ * @param y1 
+ * @param x2 
+ * @param y2 
+ * @param t 
+ * @param x 
+ * @param y 
+ */
+void get_point(float x1, float y1, float x2, float y2, float t, float & x, float & y){
+    x = x1 + (x2-x1)*t;
+    y = y1 + (y2-y1)*t;
+}
+
+/**
+ * @brief 绘制三次贝塞尔曲线。
+ * 
+ */
+class Bezier{
+public:
+    Bezier(){
+        this->num_point = 0;
+    }
+
+    /**
+     * @brief 初始化三阶贝塞尔曲线
+     * 
+     */
+    void init(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4){
+        this->x1 = x1;
+        this->x2 = x2;
+        this->x3 = x3;
+        this->x4 = x4;
+        this->y1 = y1;
+        this->y2 = y2;
+        this->y3 = y3;
+        this->y4 = y4;
+        this->num_point = 0;
+        float t = 0;
+        float interval = 0.001; 
+        while (t <= 1){
+            float x11,y11;
+            float x22,y22;
+            float x33,y33;
+            get_point(x1, y1, x2, y2, t, x11, y11);
+            get_point(x2, y2, x3, y3, t, x22, y22);
+            get_point(x3, y3, x4, y4, t, x33, y33);
+
+            float x111, y111;
+            float x222, y222;
+            get_point(x11, y11, x22, y22, t, x111, y111);
+            get_point(x22, y22, x33, y33, t, x222, y222);
+
+            float x1111, y1111;
+            get_point(x111, y111, x222, y222, t, x1111, y1111);
+
+            vertices[3*this->num_point] = x1111;
+            vertices[3*this->num_point+1] = y1111;
+            vertices[3*this->num_point+2] = 0;
+            this->num_point++;
+            t += interval;
+        }
+
+        // 创建顶点数组缓冲对象
+        glGenVertexArrays(1, &this->VAO);
+        glGenBuffers(1, &this->VBO);
+        glBindVertexArray(this->VAO);
+        glBindBuffer(GL_ARRAY_BUFFER, this->VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(this->vertices), this->vertices, GL_STATIC_DRAW);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+        glEnableVertexAttribArray(0);
+    }
+
+    /**
+     * @brief 绘制贝塞尔曲线。
+     * 
+     */
+    void draw(){
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBindVertexArray(this->VAO);
+        // glDrawElement 这个函数画不了点
+        glDrawArrays(GL_POINTS,0, this->num_point);
+    }
+private:
+    float x1, y1;
+    float x2, y2;
+    float x3, y3;
+    float x4, y4;
+    float vertices[5000];
+    GLuint VAO,VBO;
+    int num_point;
+};
+
+
+
+
+
+
+/**
  * @brief 场景类，用于显示点和线
  * 
  */
@@ -91,6 +193,7 @@ public:
         this->indices[3] = 2;
         this->indices[4] = 2;
         this->indices[5] = 3;
+        this->my_bezier = Bezier();
     }
 
     /**
@@ -106,6 +209,13 @@ public:
         glBufferData(GL_ARRAY_BUFFER, sizeof(this->vertices), this->vertices, GL_STATIC_DRAW);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
         glEnableVertexAttribArray(0);
+        if (this->is_full()){
+            /* 更新本地贝塞尔曲线 */
+            this->my_bezier.init(this->vertices[0], this->vertices[1],
+                                this->vertices[3], this->vertices[4],
+                                this->vertices[6], this->vertices[7],
+                                this->vertices[9], this->vertices[10]);
+        }
     }
 
     /**
@@ -157,6 +267,7 @@ public:
             glBindVertexArray(this->VAO);
             // glDrawElement 这个函数画不了点
             glDrawArrays(GL_LINE_STRIP, 0, this->num_point);
+            this->my_bezier.draw();
         }
         else {
             /* 如果没有满就画点 */
@@ -181,7 +292,10 @@ private:
     float indices[3*2]; /** 三条线，需要三对索引 */
     GLuint VAO, VBO, EBO;
     int num_point;
+    Bezier my_bezier;
 };
+
+
 
 
 #endif

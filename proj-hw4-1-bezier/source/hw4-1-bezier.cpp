@@ -74,10 +74,7 @@ int main()
     // Point p1 = Point(0.5,0.5);
     // Line l1 = Line(0.5,0.9);
 
-    // s1.add_point(-0.5,-0.5);
-    // s1.add_point(-0.5,0.5);
-    // s1.add_point(0.5,-0.5);
-    // s1.add_point(0.5,0.5);
+
     //---------------------------------------------------
     // render loop
     // -----------
@@ -141,12 +138,27 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
+/**
+ * @brief 鼠标点击的回调函数
+ * 
+ * @param window 
+ * @param button 
+ * @param action 
+ * @param mods 
+ */
 void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 {
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
         s1.add_point(curse_x, curse_y);
 }
 
+/**
+ * @brief 鼠标移动的回调函数
+ * 
+ * @param window 
+ * @param x 
+ * @param y 
+ */
 void curse_pos_callback(GLFWwindow *window, double x, double y)
 {
     // std::cout << "(pos:" << x << "," << y << ")" << std::endl;
