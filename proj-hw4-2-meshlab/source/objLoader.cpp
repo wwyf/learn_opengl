@@ -34,9 +34,9 @@ void objLoader::load_from_file(std::string obj_file_name){
         else if (flag == 'f'){
             int x,y,z;
             obj_file >> x >> y >> z;
-            indices[3*this->indices_size] = x;
-            indices[3*this->indices_size+1] = y;
-            indices[3*this->indices_size+2] = z;
+            indices[3*this->indices_size] = x-1;
+            indices[3*this->indices_size+1] = y-1;
+            indices[3*this->indices_size+2] = z-1;
             // cout << indices[3*this->indices_size] << " " << indices[3*this->indices_size+1] << " " << indices[3*this->indices_size+2]  << " " << endl; 
             this->indices_size++;
         }
