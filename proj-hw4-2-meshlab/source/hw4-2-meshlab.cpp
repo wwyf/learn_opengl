@@ -39,11 +39,17 @@ float translation_z = -3.0f;
 /* 模式切换, 默认为查看模式，1为探索模式 */
 int mode_toggle = 0;
 
+/* 模式切换，flat模式， */
+int show_mode = 0;
+
 /* 摄像机类，用于改变视角 */
 Camera my_camera = Camera();
 
 
-int main()
+
+glm::vec4 myColor = glm::vec4(0.5f, 0.9f, 0.9f, 1.0f);
+
+int main(int argc, char* argv[])
 {
     // glfw: initialize and configure
     // ------------------------------
@@ -92,7 +98,13 @@ int main()
     // Line l1 = Line(0.5,0.9);
     glm::mat4 mouse_rolate = glm::mat4(1.0f);
     Mesh m1 = Mesh();
-    m1.load_from_file("cow.obj");
+    // cout << argc << endl;
+    if (argc == 1){
+        m1.load_from_file("cow.obj");
+    }
+    else {
+        m1.load_from_file(argv[1]);
+    }
     m1.init_mesh_data();
 
 
@@ -150,7 +162,7 @@ int main()
         glm::mat4 model = glm::mat4(1.0f);
         glm::mat4 view = glm::mat4(1.0f);
         glm::mat4 projection = glm::mat4(1.0f);
-        glm::vec4 myColor = glm::vec4(0.5f, 0.9f, 0.9f, 1.0f);
+
 
 
         if (mouse_press_flag){
@@ -214,20 +226,20 @@ void processInput(GLFWwindow *window)
     }
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS){
-        translation_y += 0.001;
+        // translation_y += 0.001;
         my_camera.process_keyboard_input(BACKWARD);
     }
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS){
-        translation_y += 0.001;
+        // translation_y += 0.001;
         my_camera.process_keyboard_input(FORWARD);
     }
     if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS){
-        translation_y += 0.001;
+        // translation_y += 0.001;
         my_camera.process_keyboard_input(UP);
     }
     if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS){
-        translation_y += 0.001;
+        // translation_y += 0.001;
         my_camera.process_keyboard_input(DOWN);
     }
 
@@ -254,6 +266,21 @@ void processInput(GLFWwindow *window)
     }
     if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS){
         translation_z -= 0.0009;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS){
+        show_mode = 0;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS){
+        show_mode = 1;
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS){
+        show_mode = 2;
+    }
+    if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS){
+        my_camera.reflesh();
     }
 }
 

@@ -230,6 +230,87 @@ source/objLoader.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.s
 .PHONY : source/objLoader.cpp.s
 
+source/offLoader.obj: source/offLoader.cpp.obj
+
+.PHONY : source/offLoader.obj
+
+# target to build an object file
+source/offLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/offLoader.cpp.obj
+.PHONY : source/offLoader.cpp.obj
+
+source/offLoader.i: source/offLoader.cpp.i
+
+.PHONY : source/offLoader.i
+
+# target to preprocess a source file
+source/offLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/offLoader.cpp.i
+.PHONY : source/offLoader.cpp.i
+
+source/offLoader.s: source/offLoader.cpp.s
+
+.PHONY : source/offLoader.s
+
+# target to generate assembly for a file
+source/offLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/offLoader.cpp.s
+.PHONY : source/offLoader.cpp.s
+
+source/plyLoader.obj: source/plyLoader.cpp.obj
+
+.PHONY : source/plyLoader.obj
+
+# target to build an object file
+source/plyLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.obj
+.PHONY : source/plyLoader.cpp.obj
+
+source/plyLoader.i: source/plyLoader.cpp.i
+
+.PHONY : source/plyLoader.i
+
+# target to preprocess a source file
+source/plyLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.i
+.PHONY : source/plyLoader.cpp.i
+
+source/plyLoader.s: source/plyLoader.cpp.s
+
+.PHONY : source/plyLoader.s
+
+# target to generate assembly for a file
+source/plyLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.s
+.PHONY : source/plyLoader.cpp.s
+
+source/test.obj: source/test.cpp.obj
+
+.PHONY : source/test.obj
+
+# target to build an object file
+source/test.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.obj
+.PHONY : source/test.cpp.obj
+
+source/test.i: source/test.cpp.i
+
+.PHONY : source/test.i
+
+# target to preprocess a source file
+source/test.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.i
+.PHONY : source/test.cpp.i
+
+source/test.s: source/test.cpp.s
+
+.PHONY : source/test.s
+
+# target to generate assembly for a file
+source/test.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.s
+.PHONY : source/test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -251,6 +332,15 @@ help:
 	@echo ... source/objLoader.obj
 	@echo ... source/objLoader.i
 	@echo ... source/objLoader.s
+	@echo ... source/offLoader.obj
+	@echo ... source/offLoader.i
+	@echo ... source/offLoader.s
+	@echo ... source/plyLoader.obj
+	@echo ... source/plyLoader.i
+	@echo ... source/plyLoader.s
+	@echo ... source/test.obj
+	@echo ... source/test.i
+	@echo ... source/test.s
 .PHONY : help
 
 

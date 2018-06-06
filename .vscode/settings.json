@@ -45,7 +45,8 @@
         "array": "cpp",
         "chrono": "cpp",
         "valarray": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "fstream": "cpp"
     },
     "latex-workshop.debug.showUpdateMessage": false,
     "cSpell.words": [

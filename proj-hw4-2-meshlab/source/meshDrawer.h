@@ -3,6 +3,8 @@
 #include <string>
 #include <glad/glad.h>
 #include "objLoader.h"
+#include "offLoader.h"
+#include "plyLoader.h"
 using namespace std;
 
 /**
@@ -38,6 +40,8 @@ public:
 
 private:
     objLoader my_obj_object;
+    offLoader my_off_object;
+    plyLoader my_ply_object;
     float * vertices;
     int vertices_size;
     unsigned int * indices;

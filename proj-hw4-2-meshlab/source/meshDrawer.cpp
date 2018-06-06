@@ -1,12 +1,21 @@
 #include <string>
 #include <glad/glad.h>
+#include <glm/glm.hpp>
 #include "objLoader.h"
+#include "offLoader.h"
+#include "shader_m.h"
+#include "plyLoader.h"
 #include "meshDrawer.h"
 using namespace std;
 
+extern int show_mode;
+extern glm::vec4 myColor;
+// extern Shader ourShader;
 
 Mesh::Mesh(){
     this->my_obj_object = objLoader();
+    this->my_off_object = offLoader();
+    this->my_ply_object = plyLoader();
 }
 
 /**
@@ -15,11 +24,30 @@ Mesh::Mesh(){
  * @param file_name 
  */
 void Mesh::load_from_file(string file_name){
-    this->my_obj_object.load_from_file(file_name);
-    this->vertices = this->my_obj_object.get_vertices_array();
-    this->indices = this->my_obj_object.get_indices_array();
-    this->vertices_size = this->my_obj_object.get_vertices_size();
-    this->indices_size = this->my_obj_object.get_indices_size();
+    char flag = file_name[file_name.size()-2];
+    switch (flag){
+        case 'b':
+            this->my_obj_object.load_from_file(file_name);
+            this->vertices = this->my_obj_object.get_vertices_array();
+            this->indices = this->my_obj_object.get_indices_array();
+            this->vertices_size = this->my_obj_object.get_vertices_size();
+            this->indices_size = this->my_obj_object.get_indices_size();
+            break;
+        case 'l':
+            this->my_ply_object.load_from_file(file_name);
+            this->vertices = this->my_ply_object.get_vertices_array();
+            this->indices = this->my_ply_object.get_indices_array();
+            this->vertices_size = this->my_ply_object.get_vertices_size();
+            this->indices_size = this->my_ply_object.get_indices_size();
+            break;
+        case 'f':
+            this->my_off_object.load_from_file(file_name);
+            this->vertices = this->my_off_object.get_vertices_array();
+            this->indices = this->my_off_object.get_indices_array();
+            this->vertices_size = this->my_off_object.get_vertices_size();
+            this->indices_size = this->my_off_object.get_indices_size();
+            break;
+    }
     cout << this->vertices_size << endl;
     cout << this->indices_size << endl;
 }
@@ -47,11 +75,44 @@ void Mesh::init_mesh_data(){
     glEnableVertexAttribArray(0);
 }
 void Mesh::draw(){
-    // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    switch (show_mode){
+        case 0:
+            // glEnable(GL_LIGHTING);
+            // glEnable(GL_LIGHT0);
+            myColor = glm::vec4(0.5f, 0.9f, 0.9f, 0.6f);
+            // ourShader.setVec4("myColor", myColor);
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+            glDrawElements(GL_TRIANGLES, this->indices_size * 3 , GL_UNSIGNED_INT, 0);
+            break;
+        case 1:
+            myColor = glm::vec4(0.5f, 0.6f, 0.9f, 1.0f);
+            // ourShader.setVec4("myColor", myColor);
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+            glDrawElements(GL_TRIANGLES, this->indices_size * 3 , GL_UNSIGNED_INT, 0);
+            break;
+        case 2:
+            glEnable(GL_POLYGON_OFFSET_FILL);//开启多边形偏移
+            glPolygonOffset(1.0, 1.0);//设置偏移量，一般-1,1即可
+            myColor = glm::vec4(0.8f, 0.4f, 0.9f, 0.4f);
+            // ourShader.setVec4("myColor", myColor);
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+            glDrawElements(GL_TRIANGLES, this->indices_size * 3 , GL_UNSIGNED_INT, 0);
+            glDisable(GL_POLYGON_OFFSET_FILL);//关闭多边形偏移
+
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+            glLineWidth(0.5f);
+            myColor = glm::vec4(0.2f, 0.9f, 0.4f, 1.0f);
+            // ourShader.setVec4("myColor", myColor);
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+            glDrawElements(GL_TRIANGLES, this->indices_size * 3 , GL_UNSIGNED_INT, 0);
+            
+
+            break;
+        default:
+            break;
+    }
     glBindVertexArray(this->VAO);
     /* NOTICE: 缓冲区大小注意设置正确，之前忘了乘3 */
-    glDrawElements(GL_TRIANGLES, this->indices_size * 3 , GL_UNSIGNED_INT, 0);
     // cout << this->vertices[2903 * 3] << " " << this->vertices[2903 * 3+1] << " " << this->vertices[2903 * 3 + 2] << endl;
     // cout << this->indices[5803 * 3] << " " << this->indices[5803 * 3+1] << " " << this->indices[5803 * 3 + 2] << endl;
 }

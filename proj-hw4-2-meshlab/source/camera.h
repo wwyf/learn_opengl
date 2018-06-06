@@ -22,6 +22,7 @@ public:
     void process_keyboard_input(camera_movement_t);
     void process_mouse_movement(float x_offset, float y_offset);
     void update_delta_time(float new_delta_time);
+    void reflesh();
 private:
     glm::mat4 view_matrix;
     glm::vec3 camera_pos;

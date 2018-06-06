@@ -63,6 +63,16 @@ void Camera::process_mouse_movement(float x_offset, float y_offset){
 
 }
 
+void Camera::reflesh(){
+    this->camera_pos = glm::vec3(0.0f, 0.0f,  3.0f);
+    this->camera_front = glm::vec3(0.0f, 0.0f, -1.0f);
+    this->world_up = glm::vec3(0.0f, 1.0f, 0.0f);
+    this->camera_up = glm::vec3(0.0f, 1.0f,  0.0f);
+    this->view_matrix = glm::mat4(1.0f);
+    this->pitch = 0;
+    this->yaw = -90;
+}
+
 
 void Camera::update_delta_time(float new_delta_time){
     this->delta_time = new_delta_time;

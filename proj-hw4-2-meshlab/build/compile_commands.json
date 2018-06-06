@@ -1,0 +1,37 @@
+[
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\camera.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\camera.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/camera.cpp"
+},
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\hw4-2-meshlab.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\hw4-2-meshlab.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/hw4-2-meshlab.cpp"
+},
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\meshDrawer.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\meshDrawer.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/meshDrawer.cpp"
+},
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\objLoader.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\objLoader.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/objLoader.cpp"
+},
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\offLoader.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\offLoader.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/offLoader.cpp"
+},
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\plyLoader.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\plyLoader.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/plyLoader.cpp"
+},
+{
+  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
+  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\test.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\test.cpp",
+  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/test.cpp"
+}
+]
