@@ -56,10 +56,24 @@ include CMakeFiles/hw4-2-meshlab.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hw4-2-meshlab.dir/flags.make
 
+CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/flags.make
+CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp
+CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj: ../source/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj"
+	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4-2-meshlab.dir\source\camera.cpp.obj -c E:\0code\learn_opengl\proj-hw4-2-meshlab\source\camera.cpp
+
+CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.i"
+	D:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\0code\learn_opengl\proj-hw4-2-meshlab\source\camera.cpp > CMakeFiles\hw4-2-meshlab.dir\source\camera.cpp.i
+
+CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.s"
+	D:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\0code\learn_opengl\proj-hw4-2-meshlab\source\camera.cpp -o CMakeFiles\hw4-2-meshlab.dir\source\camera.cpp.s
+
 CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/flags.make
 CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp
 CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj: ../source/hw4-2-meshlab.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj"
 	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4-2-meshlab.dir\source\hw4-2-meshlab.cpp.obj -c E:\0code\learn_opengl\proj-hw4-2-meshlab\source\hw4-2-meshlab.cpp
 
 CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.i: cmake_force
@@ -73,7 +87,7 @@ CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.s: cmake_force
 CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/flags.make
 CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp
 CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj: ../source/meshDrawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj"
 	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4-2-meshlab.dir\source\meshDrawer.cpp.obj -c E:\0code\learn_opengl\proj-hw4-2-meshlab\source\meshDrawer.cpp
 
 CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.i: cmake_force
@@ -87,7 +101,7 @@ CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.s: cmake_force
 CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/flags.make
 CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj: CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp
 CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj: ../source/objLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj"
 	D:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\hw4-2-meshlab.dir\source\objLoader.cpp.obj -c E:\0code\learn_opengl\proj-hw4-2-meshlab\source\objLoader.cpp
 
 CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.i: cmake_force
@@ -100,6 +114,7 @@ CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.s: cmake_force
 
 # Object files for target hw4-2-meshlab
 hw4__2__meshlab_OBJECTS = \
+"CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj" \
 "CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj" \
 "CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj" \
 "CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj"
@@ -107,6 +122,7 @@ hw4__2__meshlab_OBJECTS = \
 # External object files for target hw4-2-meshlab
 hw4__2__meshlab_EXTERNAL_OBJECTS =
 
+hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj
 hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj
 hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj
 hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj
@@ -114,7 +130,7 @@ hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/build.make
 hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/linklibs.rsp
 hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/objects1.rsp
 hw4-2-meshlab.exe: CMakeFiles/hw4-2-meshlab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hw4-2-meshlab.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\0code\learn_opengl\proj-hw4-2-meshlab\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hw4-2-meshlab.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hw4-2-meshlab.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

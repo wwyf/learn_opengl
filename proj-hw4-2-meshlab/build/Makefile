@@ -122,6 +122,33 @@ hw4-2-meshlab/fast:
 	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/build
 .PHONY : hw4-2-meshlab/fast
 
+source/camera.obj: source/camera.cpp.obj
+
+.PHONY : source/camera.obj
+
+# target to build an object file
+source/camera.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj
+.PHONY : source/camera.cpp.obj
+
+source/camera.i: source/camera.cpp.i
+
+.PHONY : source/camera.i
+
+# target to preprocess a source file
+source/camera.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.i
+.PHONY : source/camera.cpp.i
+
+source/camera.s: source/camera.cpp.s
+
+.PHONY : source/camera.s
+
+# target to generate assembly for a file
+source/camera.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.s
+.PHONY : source/camera.cpp.s
+
 source/hw4-2-meshlab.obj: source/hw4-2-meshlab.cpp.obj
 
 .PHONY : source/hw4-2-meshlab.obj
@@ -212,6 +239,9 @@ help:
 	@echo ... hw4-2-meshlab
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... source/camera.obj
+	@echo ... source/camera.i
+	@echo ... source/camera.s
 	@echo ... source/hw4-2-meshlab.obj
 	@echo ... source/hw4-2-meshlab.i
 	@echo ... source/hw4-2-meshlab.s

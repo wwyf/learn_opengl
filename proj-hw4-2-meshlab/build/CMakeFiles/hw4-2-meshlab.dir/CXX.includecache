@@ -856,6 +856,18 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../../include/glm/detail/func_vector_relational.hpp
 
+E:/0code/learn_opengl/proj-hw4-2-meshlab/source/camera.cpp
+camera.h
+E:/0code/learn_opengl/proj-hw4-2-meshlab/source/camera.h
+iostream
+-
+
+E:/0code/learn_opengl/proj-hw4-2-meshlab/source/camera.h
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+
 E:/0code/learn_opengl/proj-hw4-2-meshlab/source/hw4-2-meshlab.cpp
 glad/glad.h
 -
@@ -873,6 +885,8 @@ iostream
 -
 shader_m.h
 E:/0code/learn_opengl/proj-hw4-2-meshlab/source/shader_m.h
+camera.h
+E:/0code/learn_opengl/proj-hw4-2-meshlab/source/camera.h
 meshDrawer.h
 E:/0code/learn_opengl/proj-hw4-2-meshlab/source/meshDrawer.h
 

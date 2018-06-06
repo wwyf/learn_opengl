@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/hw4-2-meshlab.dir/source/camera.cpp.obj"
   "CMakeFiles/hw4-2-meshlab.dir/source/hw4-2-meshlab.cpp.obj"
   "CMakeFiles/hw4-2-meshlab.dir/source/meshDrawer.cpp.obj"
   "CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj"
