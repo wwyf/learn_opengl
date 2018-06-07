@@ -1,0 +1,1 @@
+ -LE:/0code/learn_opengl/proj-hw5-nanosuit/../lib -lglfw3 -lopengl32 -lgdi32 -lGLAD -lassimp -lSTB_IMAGE -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
