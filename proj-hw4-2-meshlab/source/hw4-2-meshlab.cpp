@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetMouseButtonCallback(window, mouse_button_callback);
     glfwSetCursorPosCallback(window, curse_pos_callback);
-    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -165,17 +165,22 @@ int main(int argc, char* argv[])
         glm::mat4 view = glm::mat4(1.0f);
         glm::mat4 projection = glm::mat4(1.0f);
 
-
+        if (mode_toggle){            
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+        }
+        else{
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+        }
 
         if (mouse_press_flag){
             // 转换视角
+            // cout << curse_x-curse_press_x << "   " << curse_y-curse_press_y << endl;
             float angle = sqrt( (curse_x-curse_press_x/2) *(curse_x-curse_press_x/2) + (curse_y-curse_press_y/2) * (curse_y-curse_press_y/2));
             if (abs(curse_y - curse_press_y) > abs(curse_x - curse_press_x)){
-                mouse_rolate = glm::rotate(mouse_rolate, angle/5000 * (curse_y - curse_press_y), glm::vec3(1.0f  , 0.0f, 0.0f));
+                mouse_rolate = glm::rotate(mouse_rolate, angle/1000 * (curse_press_y - curse_y), glm::vec3(1.0f  , 0.0f, 0.0f));
             }
             else {
-                mouse_rolate = glm::rotate(mouse_rolate, angle/5000 * (curse_x - curse_press_x), glm::vec3(0, 1.0f, 0.0f));
-
+                mouse_rolate = glm::rotate(mouse_rolate, angle/1000 * (curse_x - curse_press_x), glm::vec3(0, 1.0f, 0.0f));
             }
         }
         else {
