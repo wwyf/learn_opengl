@@ -46,7 +46,7 @@ int show_mode = 0;
 Camera my_camera = Camera();
 
 
-
+glm::mat4 mouse_rolate = glm::mat4(1.0f);
 glm::vec4 myColor = glm::vec4(0.5f, 0.9f, 0.9f, 1.0f);
 
 int main(int argc, char* argv[])
@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
 
     // Point p1 = Point(0.5,0.5);
     // Line l1 = Line(0.5,0.9);
-    glm::mat4 mouse_rolate = glm::mat4(1.0f);
+    
     Mesh m1 = Mesh();
     // cout << argc << endl;
     if (argc == 1){
@@ -136,7 +136,9 @@ int main(int argc, char* argv[])
             delta_y = last_y - curse_y; /* 注意y是相反的 */
             last_x = curse_x;
             last_y = curse_y;
-            my_camera.process_mouse_movement(delta_x, delta_y);
+            if (mode_toggle){
+                my_camera.process_mouse_movement(delta_x, delta_y);
+            }
         }
 
         /* 计算帧延时 */
@@ -169,10 +171,10 @@ int main(int argc, char* argv[])
             // 转换视角
             float angle = sqrt( (curse_x-curse_press_x/2) *(curse_x-curse_press_x/2) + (curse_y-curse_press_y/2) * (curse_y-curse_press_y/2));
             if (abs(curse_y - curse_press_y) > abs(curse_x - curse_press_x)){
-                mouse_rolate = glm::rotate(mouse_rolate, angle/1000 * (curse_y - curse_press_y), glm::vec3(1.0f  , 0.0f, 0.0f));
+                mouse_rolate = glm::rotate(mouse_rolate, angle/5000 * (curse_y - curse_press_y), glm::vec3(1.0f  , 0.0f, 0.0f));
             }
             else {
-                mouse_rolate = glm::rotate(mouse_rolate, angle/1000 * (curse_x - curse_press_x), glm::vec3(0, 1.0f, 0.0f));
+                mouse_rolate = glm::rotate(mouse_rolate, angle/5000 * (curse_x - curse_press_x), glm::vec3(0, 1.0f, 0.0f));
 
             }
         }
@@ -180,14 +182,14 @@ int main(int argc, char* argv[])
             // mouse_rolate = glm::mat4(1.0f);
         }
 
-        if (mode_toggle == 0){
+        // if (mode_toggle == 0){
         // 将物体向前平移三个单位,方便观察
-            view  = glm::translate(view, glm::vec3(translation_x, translation_y, translation_z));
+            model  = glm::translate(model, glm::vec3(translation_x, translation_y, translation_z));
             model = model *  mouse_rolate;
-        } 
-        else {
+        // } 
+        // else {
             view = my_camera.get_view_matrix();
-        }
+        // }
 
         // 设置投影，角度为45度
         projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -216,57 +218,68 @@ void processInput(GLFWwindow *window)
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
+    if (mode_toggle){
+        /* 探索模式按键 */
+        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS){
+            my_camera.process_keyboard_input(LEFT);
+        }
 
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS){
-        my_camera.process_keyboard_input(LEFT);
+        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS){
+            my_camera.process_keyboard_input(RIGHT);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS){
+            // translation_y += 0.001;
+            my_camera.process_keyboard_input(BACKWARD);
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS){
+            // translation_y += 0.001;
+            my_camera.process_keyboard_input(FORWARD);
+        }
+        if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS){
+            // translation_y += 0.001;
+            my_camera.process_keyboard_input(UP);
+        }
+        if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS){
+            // translation_y += 0.001;
+            my_camera.process_keyboard_input(DOWN);
+        }
+    }
+    else {
+        /* 操作模式设定 */
+        if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS){
+            translation_y += 0.001;
+        }
+        if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS){
+            translation_y -= 0.001;
+        }
+        if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS){
+            translation_x += 0.001;
+        }
+        if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS){
+            translation_x -= 0.001;
+        }
+
+        if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS){
+            translation_z += 0.0009;
+        }
+        if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS){
+            translation_z -= 0.0009;
+        }
     }
 
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS){
-        my_camera.process_keyboard_input(RIGHT);
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS){
-        // translation_y += 0.001;
-        my_camera.process_keyboard_input(BACKWARD);
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS){
-        // translation_y += 0.001;
-        my_camera.process_keyboard_input(FORWARD);
-    }
-    if (glfwGetKey(window, GLFW_KEY_U) == GLFW_PRESS){
-        // translation_y += 0.001;
-        my_camera.process_keyboard_input(UP);
-    }
-    if (glfwGetKey(window, GLFW_KEY_I) == GLFW_PRESS){
-        // translation_y += 0.001;
-        my_camera.process_keyboard_input(DOWN);
-    }
 
     if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS){
         mode_toggle = 1- mode_toggle;
+        if (mode_toggle){
+            cout << "You are in exploring mode!" << endl;
+        }
+        else {
+            cout << "You are in operating mode!" << endl;
+        }
     }
 
-
-    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS){
-        translation_y += 0.001;
-    }
-    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS){
-        translation_y -= 0.001;
-    }
-    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS){
-        translation_x += 0.001;
-    }
-    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS){
-        translation_x -= 0.001;
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS){
-        translation_z += 0.0009;
-    }
-    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS){
-        translation_z -= 0.0009;
-    }
 
     if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS){
         show_mode = 0;
@@ -281,6 +294,10 @@ void processInput(GLFWwindow *window)
     }
     if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS){
         my_camera.reflesh();
+        translation_x = 0;
+        translation_y = 0;
+        translation_z = -3.0f;
+        mouse_rolate = glm::mat4(1.0f);
     }
 }
 
@@ -291,6 +308,10 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // make sure the viewport matches the new window dimensions; note that width and 
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+    translation_x = 0;
+    translation_y = 0;
+    translation_z = -3.0f;
+
 }
 
 /**
@@ -307,11 +328,11 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && mouse_press_flag == 0){
         cout << "mouse press!" << endl;
         mouse_press_flag = 1;
-        curse_press_x = curse_x;
-        curse_press_y = curse_y;
+        // curse_press_x = curse_x;
+        // curse_press_y = curse_y;
 
-        std::cout << "(pos:" << curse_x << "," << curse_y << ")" << std::endl;
-        std::cout << "(pos:" << curse_press_x << "," << curse_press_y << ")" << std::endl;
+        // std::cout << "(pos:" << curse_x << "," << curse_y << ")" << std::endl;
+        // std::cout << "(pos:" << curse_press_x << "," << curse_press_y << ")" << std::endl;
     }
     /* 刚放下鼠标后，清空标志 */
     if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE){
