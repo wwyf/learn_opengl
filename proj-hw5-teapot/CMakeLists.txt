@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(hw5-test VERSION 0.1.0)
+project(hw5-teapot VERSION 0.1.0)
 
 ###################################################
 # include
@@ -18,7 +18,7 @@ include_directories("E:/0code/learn_opengl/include")
 link_directories("../lib")
 
 # 连接库
-set (EXTRA_LIBS ${EXTRA_LIBS} glfw3 opengl32 gdi32 GLAD openctm assimp)
+set (EXTRA_LIBS ${EXTRA_LIBS} glfw3 opengl32 gdi32 GLAD assimp)
 
 ###################################################
 # source
@@ -29,11 +29,11 @@ set (EXTRA_LIBS ${EXTRA_LIBS} glfw3 opengl32 gdi32 GLAD openctm assimp)
 aux_source_directory(source DIR_SRCS)
 
 # 指定生成目标
-add_executable(hw5-test ${DIR_SRCS})
+add_executable(hw5-teapot ${DIR_SRCS})
 
 
 ###################################################
 # option,编译选项
 ###################################################
 
-target_link_libraries (hw5-test  ${EXTRA_LIBS})
+target_link_libraries (hw5-teapot  ${EXTRA_LIBS})

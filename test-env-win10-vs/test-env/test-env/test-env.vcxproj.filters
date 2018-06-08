@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="shader_m.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\Glitter\Glitter\Vendor\glad\include\glad\glad.h">
       <Filter>Source Files</Filter>
     </ClInclude>
@@ -36,16 +33,13 @@
     <ClInclude Include="camera.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="meshDrawer.h">
+    <ClInclude Include="mesh.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="objLoader.h">
+    <ClInclude Include="model.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="offLoader.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="plyLoader.h">
+    <ClInclude Include="shader_m.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,22 +47,10 @@
     <ClCompile Include="glad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="hw4-2-meshlab.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="meshDrawer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="objLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="offLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="plyLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

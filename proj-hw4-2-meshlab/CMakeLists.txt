@@ -37,3 +37,5 @@ add_executable(hw4-2-meshlab ${DIR_SRCS})
 ###################################################
 
 target_link_libraries (hw4-2-meshlab  ${EXTRA_LIBS})
+# 可以静态链接C库，不过似乎会有一点问题。在读取Aply文件的时候，有的三角形没有绘制出来。
+# set(CMAKE_EXE_LINKER_FLAGS -static) 

@@ -5,7 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj"
   "CMakeFiles/hw4-2-meshlab.dir/source/offLoader.cpp.obj"
   "CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.obj"
-  "CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.obj"
   "hw4-2-meshlab.pdb"
   "hw4-2-meshlab.exe"
   "hw4-2-meshlab.exe.manifest"

@@ -322,5 +322,3 @@ CMakeFiles/hw4-2-meshlab.dir/source/offLoader.cpp.obj: ../source/offLoader.h
 CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.obj: ../source/plyLoader.cpp
 CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.obj: ../source/plyLoader.h
 
-CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.obj: ../source/test.cpp
-

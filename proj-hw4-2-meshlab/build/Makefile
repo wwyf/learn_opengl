@@ -284,33 +284,6 @@ source/plyLoader.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.s
 .PHONY : source/plyLoader.cpp.s
 
-source/test.obj: source/test.cpp.obj
-
-.PHONY : source/test.obj
-
-# target to build an object file
-source/test.cpp.obj:
-	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.obj
-.PHONY : source/test.cpp.obj
-
-source/test.i: source/test.cpp.i
-
-.PHONY : source/test.i
-
-# target to preprocess a source file
-source/test.cpp.i:
-	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.i
-.PHONY : source/test.cpp.i
-
-source/test.s: source/test.cpp.s
-
-.PHONY : source/test.s
-
-# target to generate assembly for a file
-source/test.cpp.s:
-	$(MAKE) -f CMakeFiles\hw4-2-meshlab.dir\build.make CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.s
-.PHONY : source/test.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -338,9 +311,6 @@ help:
 	@echo ... source/plyLoader.obj
 	@echo ... source/plyLoader.i
 	@echo ... source/plyLoader.s
-	@echo ... source/test.obj
-	@echo ... source/test.i
-	@echo ... source/test.s
 .PHONY : help
 
 

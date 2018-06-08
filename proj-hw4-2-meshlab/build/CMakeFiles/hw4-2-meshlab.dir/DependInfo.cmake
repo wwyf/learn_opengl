@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/objLoader.cpp" "E:/0code/learn_opengl/proj-hw4-2-meshlab/build/CMakeFiles/hw4-2-meshlab.dir/source/objLoader.cpp.obj"
   "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/offLoader.cpp" "E:/0code/learn_opengl/proj-hw4-2-meshlab/build/CMakeFiles/hw4-2-meshlab.dir/source/offLoader.cpp.obj"
   "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/plyLoader.cpp" "E:/0code/learn_opengl/proj-hw4-2-meshlab/build/CMakeFiles/hw4-2-meshlab.dir/source/plyLoader.cpp.obj"
-  "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/test.cpp" "E:/0code/learn_opengl/proj-hw4-2-meshlab/build/CMakeFiles/hw4-2-meshlab.dir/source/test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

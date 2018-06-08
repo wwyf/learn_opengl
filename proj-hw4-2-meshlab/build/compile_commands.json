@@ -28,10 +28,5 @@
   "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
   "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\plyLoader.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\plyLoader.cpp",
   "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/plyLoader.cpp"
-},
-{
-  "directory": "E:/0code/learn_opengl/proj-hw4-2-meshlab/build",
-  "command": "D:\\MinGW\\bin\\g++.exe   @CMakeFiles/hw4-2-meshlab.dir/includes_CXX.rsp -g   -o CMakeFiles\\hw4-2-meshlab.dir\\source\\test.cpp.obj -c E:\\0code\\learn_opengl\\proj-hw4-2-meshlab\\source\\test.cpp",
-  "file": "E:/0code/learn_opengl/proj-hw4-2-meshlab/source/test.cpp"
 }
 ]
