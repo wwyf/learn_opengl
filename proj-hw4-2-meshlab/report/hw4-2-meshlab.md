@@ -417,6 +417,56 @@ private:
     view = my_camera.get_view_matrix();
     ```
 
+#### 2.6 着色器
+
+由于在OpenGL核心模式下，着色器需要自己编写，因此实现老师作业文档中的光照效果有一点困难。
+我编写了简单的着色器，能够有一些光照的效果，不过效果并不完整。由于我在计算每个点的法向量上遇到了困难，因此我在代码中已经写死了法向量的大小，也就是每个点的法向量相同，然后再使用点与光源的距离，作为颜色深浅的判断依据，最终实现了一个有一些阴影效果的模型。还可以通过移动模型来看到模型的亮暗变化。
+
+顶点着色器如下所示：
+```c++
+#version 330 core
+layout (location = 0) in vec3 aPos;
+
+out vec3 FragPos;
+
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+uniform vec4 myColor;
+
+void main()
+{
+	gl_Position = projection * view * model * vec4(aPos, 1.0f);
+	FragPos = vec3(model * vec4(aPos, 1.0));
+}
+```
+
+片段着色器如下所示：
+
+```c++
+#version 330 core
+
+in vec3 FragPos;
+out vec4 FragColor;
+
+uniform vec3 lightPos;
+uniform vec3 lightCol;
+uniform vec3 objectCol;
+
+void main()
+{
+	// linearly interpolate between both textures (80% container, 20% awesomeface)
+	vec3 e = vec3(0,0,1);
+	vec3 norm = normalize(e);
+	vec3 lightDir = normalize(lightPos - FragPos);
+	float diff = max(dot(norm, lightDir), 0.0);
+	vec3 diffuse = diff * lightCol;
+	vec3 result = diffuse * objectCol;
+	FragColor = vec4(result,1.0);
+}
+```
+
 ## 3 程序运行方法
 
 ### 3.1 编译方法
@@ -426,7 +476,7 @@ private:
 ### 3.2 运行方法
 
 重点：在命令行下调用该程序时，第一个参数是模型文件名称。若无名称则默认为"cow.obj"。
-
+    
 1. 通用按键
    1. 按下t键，可进行模式的切换，具体切换到的模式可以在控制台输出查看
       1. 没有处理按键抖动的情况，因此有时会出现切换不成功的情况
@@ -444,6 +494,12 @@ private:
    2. 键盘wasd四个键可以改变摄像机的水平位置。
    3. 键盘ui两键可以改变摄像机的高度。u键上升，i键下降。
 
+可在命令行下这样启动。
+```sh
+hw4-2-meshlab.exe cow.obj
+hw4-2-meshlab.exe Armadillo.off
+hw4-2-meshlab.exe cactus.ply
+```
 ## 4 在实现过程中遇到的问题
 
 ### 4.1 三维对象的线绘制错乱

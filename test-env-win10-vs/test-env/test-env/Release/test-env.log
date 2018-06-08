@@ -1,14 +1,48 @@
-﻿  main.cpp
-e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\main.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+﻿  camera.cpp
+  hw4-2-meshlab.cpp
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
 e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\shader_m.h(53): warning C4101: 'infoLog': unreferenced local variable
 e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\shader_m.h(52): warning C4101: 'success': unreferenced local variable
-e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\element.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
-e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\element.h(111): warning C4305: 'initializing': truncation from 'double' to 'float'
-e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\main.cpp(150): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\main.cpp(151): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\meshdrawer.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\objloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\offloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(119): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(150): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(151): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(267): warning C4305: '+=': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(270): warning C4305: '-=': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(273): warning C4305: '+=': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(276): warning C4305: '-=': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(280): warning C4305: '+=': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(283): warning C4305: '-=': truncation from 'double' to 'float'
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(371): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\hw4-2-meshlab.cpp(372): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  meshDrawer.cpp
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\meshdrawer.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\objloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\offloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\shader_m.h(53): warning C4101: 'infoLog': unreferenced local variable
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\shader_m.h(52): warning C4101: 'success': unreferenced local variable
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\meshdrawer.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  objLoader.cpp
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\objloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  offLoader.cpp
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\offloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\offloader.cpp(39): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\offloader.cpp(40): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\offloader.cpp(41): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+  plyLoader.cpp
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.cpp(29): warning C4806: '==': unsafe operation: no value of type 'bool' promoted to type 'char' can equal the given constant
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.cpp(53): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.cpp(54): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.cpp(55): warning C4244: '=': conversion from 'float' to 'unsigned int', possible loss of data
+e:\0code\learn_opengl\test-env-win10-vs\test-env\test-env\plyloader.cpp(13): warning C4101: 'file_format': unreferenced local variable
   Generating code
-  29 of 267 functions (10.9%) were compiled, the rest were copied from previous compilation.
-    13 functions were new in current compilation
-    13 functions had inline decision re-evaluated but remain unchanged
+  328 of 359 functions (91.4%) were compiled, the rest were copied from previous compilation.
+    107 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   test-env.vcxproj -> E:\0code\learn_opengl\test-env-win10-vs\test-env\Release\test-env.exe

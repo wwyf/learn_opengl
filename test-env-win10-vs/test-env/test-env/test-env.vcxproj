@@ -24,16 +24,21 @@
     <ClInclude Include="..\..\..\..\Glitter\Glitter\Vendor\glad\include\glad\glad_glx.h" />
     <ClInclude Include="..\..\..\..\Glitter\Glitter\Vendor\glad\include\glad\glad_wgl.h" />
     <ClInclude Include="..\..\..\..\Glitter\Glitter\Vendor\glad\include\KHR\khrplatform.h" />
-    <ClInclude Include="element.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="meshDrawer.h" />
+    <ClInclude Include="objLoader.h" />
+    <ClInclude Include="offLoader.h" />
+    <ClInclude Include="plyLoader.h" />
     <ClInclude Include="shader_m.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="hw3.fs" />
-    <None Include="hw3.vs" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="glad.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="hw4-2-meshlab.cpp" />
+    <ClCompile Include="meshDrawer.cpp" />
+    <ClCompile Include="objLoader.cpp" />
+    <ClCompile Include="offLoader.cpp" />
+    <ClCompile Include="plyLoader.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
