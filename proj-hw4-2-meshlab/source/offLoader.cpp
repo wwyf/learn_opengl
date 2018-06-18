@@ -5,7 +5,6 @@ offLoader::offLoader(){
     vertices_size = 0;
     indices = nullptr;
     indices_size = 0;
-
 }
 void offLoader::load_from_file(std::string off_file_name){
     ifstream off_file(off_file_name);
